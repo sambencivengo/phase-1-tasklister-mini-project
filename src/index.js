@@ -2,9 +2,11 @@
 const taskContainer = document.getElementById('tasks');
 const taskForm = document.getElementById('create-task-form');
 const taskInput = document.getElementById('new-task-description');
+const taskDescription = document.getElementById('new-task-description');
 
 const start = () => {
   console.log('Hello World');
+  createDropdown();
 };
 
 const submitTask = (e) => {
@@ -18,8 +20,15 @@ const submitTask = (e) => {
     alert('Please submit a task');
     taskForm.reset();
   }
+
   taskForm.reset();
 };
+
+function createDropdown() {
+  const optionGroup = document.createElement('optgroup');
+  const option = document.createElement('option');
+}
+const submit = document.querySelector('type.submit');
 
 taskForm.addEventListener('submit', submitTask);
 
